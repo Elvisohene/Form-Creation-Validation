@@ -32,15 +32,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Display feedback
-    feedbackDiv.style.display = "block";
+    feedbackDiv.style.display = "block"; // ✅ Make it visible
+
     if (isValid) {
-      feedbackDiv.textContent = "Registration successful!";
-      feedbackDiv.style.color = "#28a745";
-      feedbackDiv.style.backgroundColor = "#d4edda";
+      feedbackDiv.textContent = "Registration successful!"; // ✅ Set success message
+      feedbackDiv.style.color = "#28a745"; // ✅ Green text
     } else {
-      feedbackDiv.innerHTML = messages.join("<br>");
-      feedbackDiv.style.color = "#d8000c";
-      feedbackDiv.style.backgroundColor = "#ffbaba";
+      feedbackDiv.innerHTML = messages.join("<br>"); // ✅ Join messages with <br>
+      feedbackDiv.style.color = "#dc3545"; // ✅ Red text
     }
   });
 });
